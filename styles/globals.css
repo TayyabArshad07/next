@@ -2,26 +2,111 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 10px;
+}
+nav {
+  display: flex;
+  gap: 50px;
+}
+.nav-buutons {
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+.SignUp {
+  border: 2px solid white;
+  border-radius: 4px;
+  padding: 3px 9px;
+  background-color: black;
+  color: white;
+  margin-left: 5px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.SignUp:hover {
+  background-color: white;
+  transition: ease-in-out 0.5s;
+  color: black;
+}
+.LogIn {
+  border: 2px solid white;
+  border-radius: 3px;
+  padding: 3px 16px;
+  background-color: white;
+  margin-left: 5px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.LogIn:hover {
+  background-color: black;
+  color: white;
+  transition: ease-in-out 0.5s;
+}
+.name {
+  color: white;
+}
+.logo {
+  display: flex;
+}
+.lightmode {
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  background-color: yellow;
+}
+.sidebar {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background-color: rgba(128, 128, 128, 0.15);
+  margin-top: 5px;
+  width: fit-content;
+  /* height: 50vh; */
+  height: fit-content;
+}
+.sidebar-buttons {
+  display: block;
+  text-decoration: none;
+  color: black;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  padding: 13.4px 15px;
+  font-size: 20px;
+}
+
+/* Contactus */
+.Contactus {
+  @apply grid gap-4 w-fit my-4 mx-5;
+}
+/* .Contactus input {
+  @apply px-5 py-2 rounded bg-white outline-none shadow-md shadow-gray-300 border border-gray-200;
+} */
+.checkbox {
+  @apply h-5 w-5;
+}
+.formElem {
+  @apply flex items-center gap-2 bg-[#fff] px-5 py-3 rounded-md shadow-md shadow-gray-300 border-[1px] border-gray-200 text-2xl;
+}
+.formElem input {
+  @apply text-[18px] font-medium text-[#00ff] outline-none;
+}
+.formElem label svg {
+  @apply text-gray-600 hover:text-[#00ff] transition-all ease-in-out duration-700;
+}
+/* Contactus */
